@@ -1,0 +1,32 @@
+nav {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1d25;
+    color: #f3f3f3;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f3f3f3;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #cdcdcd;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0px 16px 0px 0px;
+} 
+
+nav img {
+    margin: 4px 16px 4px 16px;
+}
