@@ -1,11 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Navigation.css'
-import logo from './a2png.png'
+import logo from '../imgs/a2png.png'
 
 export class Navigation extends Component {
 
     render() {
+        
         return (
             <nav id='display-nav' fixed='top'>
                 <div>
@@ -17,6 +18,7 @@ export class Navigation extends Component {
                     <li><a href='/'>Portfolio</a></li>
                     <li><a href='/'>Contact</a></li>
                 </ul>
+
             </nav>
         );
     }
