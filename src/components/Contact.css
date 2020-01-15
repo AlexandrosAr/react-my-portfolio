@@ -1,0 +1,7 @@
+#contact-container {
+    display: flex;
+    height: 85%;
+    align-items: center;
+    color: #B4D197;
+    background-color: rgba(255, 255, 255, 0);
+}
