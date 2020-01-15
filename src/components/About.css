@@ -1,0 +1,7 @@
+#about-container {
+    display: flex;
+    height: 85%;
+    align-items: center;
+    color: #42493A;
+    background-color: #A6AE9D;
+}
