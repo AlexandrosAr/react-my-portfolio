@@ -1,28 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
 import './index.css';
-//import App from './App';
-import Navigation from './Navigation';
-import Home from './Home';
 import * as serviceWorker from './serviceWorker';
+import App from './App.js';
 
-class Index extends Component {
-    
-    render() {
-        return (
-            <div id='index-container'>
-                <div id='index-nav-container'>
-                    <Navigation />
-                </div>
-                <div id='index-body-container'>
-                    <Home />
-                </div>
-            </div>
-        );
-    }
-    
-}
-
-ReactDOM.render(<Index />, document.getElementById('root'));
+ReactDOM.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>, document.getElementById('root'));
 
 serviceWorker.unregister();
