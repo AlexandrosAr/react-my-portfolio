@@ -9,7 +9,7 @@ export class Footer extends React.Component {
     render() {
         return (
             <div id='footer-container'>
-                My Footer
+                Developed by Alexandros Arapidis, React.js
             </div>
         );
     }
