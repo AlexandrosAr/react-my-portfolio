@@ -1,7 +1,84 @@
+/* There is the same in three diff files create a shared css file */
 #home-container {
-    display: flex;
-    height: 85%;
-    align-items: center;
-    color: #B4D197;
-    background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  height: 95%;
+  align-items: center;
+  color: #b4d197;
+  background-image: url();
+  background: url('../imgs/bg-grey-city-big.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#inside-square {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 32px 32px;
+  margin: 4% 4% 4% 20.2%;
+  /* background-color: #a6ae9d; */
+  /* color: #42493a; */
+  background-color: #17181f;
+  opacity: 0.9;
+  color: white;
+  width: 100%;
+  height: 92%;
+
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(23,24,1,1);
+  -moz-box-shadow: 0px 0px 1px 1px rgba(23,24,1,1);
+  box-shadow: 0px 0px 1px 1px rgba(23,24,1,1);
+}
+
+#img-title-container {
+  display: flex;
+  margin: 32px 0px 16px 0px;
+}
+
+.custom-img {
+  border-radius: 50%;
+  margin: 0px 32px 0px 0px;
+}
+
+#introduction-container {
+  align-self: center;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+#introduction-container p {
+  font-size: 24px;
+  margin: 0px 0px 8px 0px;
+}
+
+p {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 1000px) {
+  #inside-square {
+    margin: 3% 3% 3% 20.2%;
+    height: 94%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #inside-square {
+    margin: 2% 2% 2% 25.5%;
+    height: 96%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #inside-square {
+    margin: 1.5% 1.5% 1.5% 30.5%;
+    height: 97%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #inside-square {
+    margin: 0 0;
+    height: 88%;
+  }
 }
