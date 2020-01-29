@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Home.css'
+import './SharedStyles.css'
 import logo from '../imgs/profile_pic.jpg'
 
 export class Home extends Component {
@@ -14,7 +15,7 @@ export class Home extends Component {
         let dynamicAge = parseInt(Math.floor((Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()) - Date.UTC(birthdate.getFullYear(), birthdate.getMonth(), birthdate.getDate())) / (1000 * 60 * 60 * 24 * 365)), 10);
 
         return (
-            <div id='home-container'>
+            <div id='page-container'>
                 <div id='inside-square'>
                     <div id='img-title-container'>
                         <img className='custom-img' src={logo} alt='website logo' height='240' width='240' ></img>

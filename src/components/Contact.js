@@ -5,7 +5,7 @@ import './Contact.css';
 class Contact extends Component {
     render() {
         return(
-            <div id='contact-container'>
+            <div id='page-container'>
                 To get in touh with me make a pray to the God!
             </div>
         );
