@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Comic Sans', 'Comic Sans MS', cursive;
+  font-family: 'Rokkitt', serif !important;
   box-sizing: border-box;
   height: 100%;
 }
