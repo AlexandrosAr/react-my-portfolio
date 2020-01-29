@@ -15,8 +15,7 @@ import Contact from './components/Contact';
 /* Create a library of fonts to use it in my components */
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee, faHome, faAddressCard, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckSquare, faCoffee, faHome} from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faCheckSquare, faCoffee, faHome);
 
@@ -45,10 +44,11 @@ class App extends Component {
 
         return (
             <Router className='page-container'>
-                <Navbar className='custom-navbar' expand='false' onToggle={this.onExpandNavBar} expanded={this.state.navExpanded}>
-                    <Navbar.Brand className='custom-navbrand'><img className='custom-img' src={logo} alt='website logo' height='60' width='60' /></Navbar.Brand>
-
+                <Navbar className='custom-navbar' id='portfolio-navbar' expand='false' onToggle={this.onExpandNavBar} expanded={this.state.navExpanded}>
                     <Navbar.Toggle className='navbar-dark' aria-controls='navbar-toggle' />
+                    <Navbar.Brand id='custom-navbrand'><img className='custom-img' src={logo} alt='website logo' height='60' width='60' /></Navbar.Brand>
+
+
                     <Navbar.Collapse id='navbar-toggle'>
                         <Nav id='nav-container-custom'>
                             <Link className='nav-link' onClick={this.closeNav} to='/'>Home</Link>
