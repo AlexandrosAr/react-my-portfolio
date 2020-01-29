@@ -1,6 +1,7 @@
+/* There is the same in three diff files create a shared css file */
 #about-container {
     display: flex;
-    height: 85%;
+    height: 95%;
     align-items: center;
     color: #42493A;
     background-color: #A6AE9D;
