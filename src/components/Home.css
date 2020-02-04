@@ -4,6 +4,8 @@
 #img-title-container {
   display: flex;
   margin: 32px 0px 16px 0px;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .custom-img {
