@@ -27,7 +27,7 @@ export class Home extends Component {
 
                     <div id='introduction-container'>
                         <p>Hi guys! Welcome to my personal portfolio!</p>
-                        <p>My name is Alex, I am {dynamicAge} years old and I am a passionate developer who seeks always to improve himself.</p>
+                        <p>My name is Alex, I am {dynamicAge} years old and I am a full stack developer who seeks always to improve himself.</p>
                         <p>This is my first attempt to develop a portfolio.</p>
                         <p>Feel free to get in touch with me.</p>
                         <p>Thank you!</p>
