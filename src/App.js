@@ -52,8 +52,8 @@ class App extends Component {
                     <Navbar.Collapse id='navbar-toggle'>
                         <Nav id='nav-container-custom'>
                             <Link className='nav-link' onClick={this.closeNav} to='/'>Home</Link>
-                            <Link className='nav-link' onClick={this.closeNav} to='/About'>About</Link>
-                            <Link className='nav-link' onClick={this.closeNav} to='/contact'>Contact</Link>
+                            <Link className='nav-link' onClick={this.closeNav} to='/About'>About me</Link>
+                            <Link className='nav-link' onClick={this.closeNav} to='/contact'>Contact me</Link>
 
                         </Nav>
 
