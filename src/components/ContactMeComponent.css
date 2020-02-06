@@ -1,0 +1,62 @@
+#inside-square {
+    padding: 0 32px 0 32px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    width: 100%;
+}
+
+#contact-form .form-field input {
+    width: 80%;
+}
+
+#contact-form .form-field textarea {
+    width: 80%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0 4px 0;
+    width: 100%;
+}
+
+.input-field:focus {
+    outline-color: #B4D197;
+}
+
+#submit-form {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 8px 0 0 0;
+
+}
+
+#captcha-field {
+    width: auto;
+    outline-color: #B4D197;
+}
+
+.btn {
+    background-color: #B4D197;
+    outline-color: #B4D197;
+}
+
+.btn:hover {
+    color: #fff;
+    outline-color: #B4D197;
+}
+
+.btn:active {
+    outline-color: #B4D197;
+}
+
+.btn:focus {
+    outline-color: #B4D197;
+}

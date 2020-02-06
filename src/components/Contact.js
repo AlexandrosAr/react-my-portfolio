@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Contact.css';
+import ContactMeComponent from './ContactMeComponent'
 
 class Contact extends Component {
     render() {
-        return(
+        return (
             <div id='page-container'>
-                To get in touh with me make a pray to the God!
+                <div id='inside-square'>
+                    <div id='title'>
+                        Contact Me!
+                        <p>I'll be glad to answer your questions!</p>
+                        <ContactMeComponent />
+                    </div>
+
+                </div>
+
             </div>
         );
     }

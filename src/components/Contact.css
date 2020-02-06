@@ -1,1 +1,7 @@
 /* There is the same in three diff files create a shared css file */
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 64px;
+}
