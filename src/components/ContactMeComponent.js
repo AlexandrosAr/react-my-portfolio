@@ -11,7 +11,12 @@ class ContactMeComponent extends Component {
             email: '',
             subject: '',
             message: '',
-            captcha: ''
+            captcha: '',
+            apiUrl: 'http://localhost:5000',
+            captchaNums: {
+                num1: '',
+                num2: ''
+            }
         };
 
         this.handleSubmitMessage = this.handleSubmitMessage.bind(this);
@@ -20,6 +25,18 @@ class ContactMeComponent extends Component {
         this.onSubjectFieldChange = this.onSubjectFieldChange.bind(this);
         this.onMessageFieldChange = this.onMessageFieldChange.bind(this);
         this.onCaptchaFieldChange = this.onCaptchaFieldChange.bind(this);
+        this.getCaptchaNums = this.getCaptchaNums.bind(this);
+        this.getCaptchaNums();
+    }
+
+    async getCaptchaNums() {
+        const captchaNumbers = await axios.post(`${this.state.apiUrl}/get-captcha-numbers`);
+        this.setState({
+            captchaNums: {
+                num1: captchaNumbers.data.num1,
+                num2: captchaNumbers.data.num2
+            }
+        });
     }
 
     resetForm() {
@@ -37,31 +54,18 @@ class ContactMeComponent extends Component {
 
         const {name, email, subject, message, captcha} = this.state;
 
-        await axios.post('/api/form',{
-            name,
-            email,
-            subject,
-            message,
-            captcha
-        });
-       /*  fetch('http://localhost:3002/send',{
-            method: 'POST',
-            body: JSON.stringify(this.state),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
+        try {
+            const res = await axios.post(`${this.state.apiUrl}/send-mail`,{
+                name,
+                email,
+                subject,
+                message,
+                captcha
+            });
+            console.log(res)
+        } catch (err) {
+            console.log('Error: ', err)
         }
-        ).then(
-            (response) => (response.json())
-        ).then((response) => {
-            if(response.status === 'success') {
-                alert('Message was sent');
-                this.resetForm()
-            } else if(response.status === 'fail'){
-                alert("Message failed to send.")
-            }
-        }); */
         console.log(this.state);
     }
 
@@ -96,7 +100,8 @@ class ContactMeComponent extends Component {
     }
 
 
-    render() {
+    render() { 
+        const captchaLabel = `${this.state.captchaNums.num1} + ${this.state.captchaNums.num2} = `; 
        return (
            <form id='contact-form' onSubmit={this.handleSubmitMessage} method='POST'>
                <div className='form-field'>
@@ -109,10 +114,14 @@ class ContactMeComponent extends Component {
                    <input className='input-field box-shadow' id='subject-input-field' type='text' value={this.state.subject} onChange={this.onSubjectFieldChange} placeholder='Subject' required/>
                </div>
                <div className='form-field'>
-                   <textarea className='input-field box-shadow' id='message-input-field' value={this.state.message} onChange={this.onMessageFieldChange} placeholder='Type your message here' required rows='5'/>
+                   <textarea className='input-field box-shadow' id='message-input-field' value={this.state.message} onChange={this.onMessageFieldChange} placeholder='Type your message here' required rows='7'/>
                </div>
                <div id='submit-form' >
-                    <input id='captcha-field' className='box-shadow' type='text' value={this.state.captcha} onChange={this.onCaptchaFieldChange} required minLength="1" maxLength="4" size='4' />
+                   <div>
+                        {captchaLabel}
+                        <input id='captcha-field' className='box-shadow' type='text' value={this.state.captcha} onChange={this.onCaptchaFieldChange} required minLength="1" maxLength='2' size='3' />
+                   </div>
+                    
                     <button type='submit' className='btn'>Submit</button>
                </div>
            </form>

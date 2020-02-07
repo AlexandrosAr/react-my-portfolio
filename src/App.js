@@ -12,13 +12,6 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Contact from './components/Contact';
 
-/* Create a library of fonts to use it in my components */
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee, faHome} from '@fortawesome/free-solid-svg-icons'
-
-library.add(fab, faCheckSquare, faCoffee, faHome);
-
 class App extends Component {
     constructor(props) {
         super(props);

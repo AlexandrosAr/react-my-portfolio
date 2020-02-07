@@ -41,6 +41,7 @@
 #captcha-field {
     width: auto;
     outline-color: #B4D197;
+    margin: 0 0 0 8px;
 }
 
 .btn {
