@@ -33,9 +33,8 @@ app.post('/send-mail', (req, res) => {
             <p>${req.body.message}</p>`;
 
         let transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 465,
-            secure: true,
+            host: 'smtp.ethereal.email',
+            port: 587,
             auth: {
                 user: creds.USER, // generated ethereal user
                 pass: creds.PASS // generated ethereal password
